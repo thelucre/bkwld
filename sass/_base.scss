@@ -9,7 +9,7 @@ $col46:		566;
 $col26:		320;
 
 body {
-	margin:0 0 100px 0;
+	margin: 0;
 	text-align:center;
 }
 
@@ -19,9 +19,6 @@ body {
 	max-width:1208px;
 	text-align: left;
 	word-spacing: -1;
-	// text-align: justify;
- //    -ms-text-justify: distribute-all-lines;
- //    text-justify: distribute-all-lines;
 }
 
 .grid {
@@ -45,8 +42,6 @@ body {
 	display:inline-block;
 	zoom:1;
 	*display:inline;
-	// background-image: url(../img/tile-bg.png);
-	// background-repeat: repeat;
 }
 [class*='col-']:last-of-type {
   margin-right:0px;
