@@ -2,7 +2,7 @@
 
 ok, bkwld. here's the beef. 
 
-i created the grid from scratch. very interesting excerise. smart, on your part. i see why this could be a headache. 
+i created the grid from scratch, javascript free. very interesting excerise. smart, on your part.  
 
 i spent 3 hours making the grid work, 4 hours styling and pluggin in content, and a little extra to fix for ie 7/8
 
