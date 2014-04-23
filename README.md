@@ -38,7 +38,7 @@ _full header row example_
 
 ### nesting
 
-when you have a nested row, add the .nested-right or .nested-left class. column classes should be added to the nested element, no the child.
+when you have a nested row, add the .nested-right or .nested-left class. column classes should be added to the nested element, not the child element with a row-* class.
 
 _nesting example_
 
