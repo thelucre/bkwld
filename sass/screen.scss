@@ -1,0 +1,221 @@
+
+@import "compass/reset";
+
+$color: #0066cc;
+
+// sizing values
+$maxWidth: 	1208;
+$ratio1024: (1000 / $maxWidth);
+$colFull: 	100;
+$col53:		641;
+$col46:		566;
+$col26:		320;
+
+$zen-column-count: 100;
+$zen-gutter-width: 1px !default;
+
+@function numToPx($num){
+  @return ($num) * 1px; //convert to px
+}
+
+body {
+	margin: 1em;
+	text-align:center;
+}
+
+.wrapper {
+	position: relative;
+	margin:1em auto;
+	max-width:1208px;
+	text-align: left;
+	word-spacing: -1;
+	text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+}
+
+.grid {
+	width: 100%;
+}
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+[class*='col-'] {
+	margin: 0 1px 1px 0;
+	transition: width 0.5s;
+	vertical-align: top;
+	display: inline-block;
+	*display: inline;
+	zoom: 1
+}
+[class*='col-']:last-of-type {
+  margin-right:0px;
+}
+
+.row-nested {
+	display:inline-block;
+}
+
+// column sizes
+.col-full {
+	width: ($colFull)*1%;
+}
+.col-53 {
+	width: numToPx( $col53 );
+	display:block;
+	float:left;
+}
+.col-46 {
+	width: numToPx( $col46 );
+	display:block;
+	float:left
+}
+.col-26 {
+	width: numToPx( $col26 );
+	display:block;
+	float:left
+}
+
+// row sizes
+.row {
+	display:block;
+	overflow:hidden;
+}
+// when nested, have to account for the 1px gutter (assuming only 2 stacked)
+.row > .nested-right:last-of-type,
+.row > .nested-left:last-of-type,
+{
+	margin-bottom:-1px;
+
+	[class*='row-']:last-of-type {
+		margin-bottom: -1px;
+
+		&.double-nested {
+			margin-bottom: 0;
+		}
+	}
+}
+.double-nested {
+	margin-bottom:0px;
+}
+
+.nested-right {
+	float:right;
+	margin-right:0px;
+	margin-left:-1px;
+}
+.nested-left {
+	float:left;
+	margin-right:1px;
+	margin-left:0px;
+}
+.row-full {
+	height: 768px;
+	background-color: #0066aa;
+}
+.row-xxlg {
+	height: 765px;
+	background-color: #9900aa;
+}
+.row-xlg {
+	height: 700px;
+	background-color: #cc00aa;
+}
+.row-lg {
+	height: 532px;
+	background-color: #336699;
+}
+.row-md {
+	height: 467px;
+	background-color: #3366ff;
+}
+.row-sm {
+	height:385px;
+	background-color: #0000aa;
+}
+.row-xsm {
+	height:233px;
+	background-color: #663300;
+}
+
+/************************************
+ * ipad - landscape
+ ************************************/
+ @media (max-width: 1250px) and (min-width:1024px) {
+	.wrapper {
+		width: 1000px;
+	}
+	[class*='col-'] {
+		transition: none;
+	}
+	// column sizes
+	.col-full {
+		width: ($colFull)*1%;
+	}
+	.col-53 {
+		width: 529px;
+		display:block;
+	}
+	.col-46 {
+		width: 470px;
+		display:block;
+	}
+	.col-26 {
+		width: 264px;
+		display:block;
+	}
+}
+
+@media (max-width: 1023px) and (min-width:768px) {
+	.wrapper {
+		width: 750px;
+	}
+	.col-53 {
+		width: 399px;
+		display:block;
+	}
+	.col-46 {
+		width: 350px;
+		display:block;
+	}
+	.col-26 {
+		width: 199px;
+		display:block;
+	}
+	[class*='col-'] {
+		transition: none;
+	}
+}
+
+@media (max-width:767px) and (min-width:321px) {
+	.wrapper {
+		width: 100%;
+	}
+	.row > .nested-right:last-of-type,
+	.row > .nested-left,
+	{
+		margin-bottom:1px;
+
+		[class*='row-']:last-of-type {
+			margin-bottom: 0px;
+		}
+	}
+	.nested-right { margin-bottom: 0px;}
+	.double-nested {
+		margin-bottom: 1px;
+	}
+	[class*='col-'] {
+		width:100%;
+		margin-bottom: 1px;
+	}
+	
+}
+
+
