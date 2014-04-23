@@ -11,36 +11,8 @@
 // setup
 @import "functions";
 @import "fonts";
-@import "base"; // grid stylin'
-
-// colors from photographs
-$skyblue: #75a8c5;
-$limegreen: #63b778;
-$tan: #8f9190;
-$greyblue: #5c687d;
-$greygreen: #61735e;
-$rust: #7e392c;
-$teal: #157d98;
-$darkblue: #0d3672;
-$pink: #f5a1a3;
-$navy: #010042;
-$sandstone: #bbc1c3;
-$browngreen: #67604b;
-$scabbish: #7b394b;
-
-.skyblue { 		background-color: $skyblue; }
-.limegreen { 	background-color: $limegreen; }
-.tan { 			background-color: $tan; }
-.greyblue { 	background-color: $greyblue; }
-.greygreen { 	background-color: $greygreen; }
-.rust { 		background-color: $rust; }
-.teal { 		background-color: $teal; }
-.darkblue { 	background-color: $darkblue; }
-.pink { 		background-color: $pink; }
-.navy { 		background-color: $navy; }
-.sandstone { 	background-color: $sandstone; }
-.browngreen { 	background-color: $browngreen; }
-.scabbish { 	background-color: $scabbish; }
+@import "base"; 
+@import "colors";
 
 // styling
 body {
@@ -69,8 +41,8 @@ body {
 #bathsheba {
 	@include setBackgroundImage( "bathsheba.jpg" ); 
 }
-.margin-top-extra {
-	margin-top: 25%;
+#brain-coral {
+	@include setBackgroundImage( "brain-coral.jpg" ); 
 }
 h1.intro, h2 { 
 	font-family: 'wolf_in_the_cityregular', Arial, sans-serif;
@@ -87,9 +59,10 @@ h2 {
 	margin:0 0 0 0;
 	line-height: 60px;
 	padding-top:15%;
-	@include single-text-shadow(0,0);
+	transition:font-size 0.5s;
+	@include single-text-shadow(0,0); //remove
 
-	br {
+	br.hidden {
 		display:none;
 	}
 }
@@ -98,6 +71,7 @@ p {
 	padding:15% 15% 0 15%;
 	line-height: 30px;
 	font-size:22px;
+	transition:font-size 0.5s;
 }
 ul {
 	padding:5% 15% 0 20%;
@@ -115,7 +89,7 @@ ul {
 	font-family: 'wolf_in_the_cityregular', Arial, sans-serif;
 	font-size:80px;
 	text-align: center;
-	margin: 20% 5%;
+	padding: 20% 5%;
 	line-height:40px;
 	@include single-text-shadow(3px, 3px);
 }
@@ -129,11 +103,16 @@ ul {
 		}
 	}
 }
+.top-bump {
+	padding-top: 25%;
+}
 
 /************************************
  * laptop
  ************************************/
-@media (max-width: 1250px) and (min-width: 1024px) {
+@media only screen 
+and (max-width: 1250px) 
+and (min-width: 1024px) {
 	h1.intro {
 		font-size: 200px;
 	}
@@ -142,13 +121,15 @@ ul {
 /************************************
  * ipad - landscape
  ************************************/
-@media (max-width: 1023px) and (min-width:768px) {
+@media only screen 
+and (max-width: 1023px) 
+and (min-width:768px) {
 	h1.intro {
 		font-size: 180px;
 		line-height: 120px;
 		margin-top: 25%;
 	}
-	h2 br {
+	h2 br.hidden, h2 br {
 		display:inherit;
 	}
 	p {
@@ -161,7 +142,9 @@ ul {
 /************************************
  * ipad - portrait
  ************************************/
-@media (max-width:767px) and (min-width:568px) {
+@media only screen 
+and (max-width:767px) 
+and (min-width:568px) {
 	h1.intro {
 		font-size: 200px;
 		line-height: 100px;
@@ -170,17 +153,55 @@ ul {
 	.margin-top-extra {
 		margin-top: 5%;
 	}
+	p {
+		padding-top: 13%;
+	}
+	@include resetPhotoCaptions();
 }
 
 /************************************
- * mobile 
+ * mobile
  ************************************/
-@media (max-width:567px) {
+@media only screen 
+and (max-width:567px) {
 	h1.intro {
 		font-size: 130px;
 		line-height: 60px;
 		margin-top: 50%;
 	}
+	h2 br.hidden, h2 br {
+		display:inherit;
+	}
+	p {
+		font-size: 17px;
+	}
+	@include resetPhotoCaptions();
 }
 
+/************************************
+ * iPhone landscape
+ ************************************/
+@media only screen 
+and (max-device-width : 568px) 
+and (orientation : landscape) {
+	h1.intro {
+		margin-top:10%;
+	}
+	@include resetPhotoCaptions();
+}
 
+/************************************
+ * small mobile
+ ************************************/
+@media only screen 
+and(max-width:320px) {
+	p {
+		font-size: 16px;
+		line-height:22px;
+		padding:15% 10%;
+	}
+	h1.intro {
+		font-size:110px;
+	}
+	@include resetPhotoCaptions();
+}

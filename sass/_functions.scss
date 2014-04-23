@@ -9,3 +9,15 @@
 	-o-background-size: cover;
 	background-size: cover;
 }
+
+@mixin resetPhotoCaptions() {
+	.caption {
+		opacity: 1;
+	}
+	.photo-box {
+		transition: none;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}

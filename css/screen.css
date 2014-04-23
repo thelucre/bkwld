@@ -53,7 +53,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-style: normal; }
 
 body {
-  margin: 0;
+  margin: 0 0 100px 0;
   text-align: center; }
 
 .wrapper {
@@ -61,10 +61,7 @@ body {
   margin: 0 auto;
   max-width: 1208px;
   text-align: left;
-  word-spacing: -1;
-  text-align: justify;
-  -ms-text-justify: distribute-all-lines;
-  text-justify: distribute-all-lines; }
+  word-spacing: -1; }
 
 .grid {
   width: 100%; }
@@ -86,9 +83,7 @@ body {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
-  background-image: url(../img/tile-bg.png);
-  background-repeat: repeat; }
+  *display: inline; }
 
 [class*='col-']:last-of-type {
   margin-right: 0px; }
@@ -215,7 +210,7 @@ body {
 /************************************
  * ipad - portrait
  ************************************/
-@media (max-width: 767px) and (min-width: 321px) {
+@media (max-width: 767px) {
   .wrapper {
     width: 100%; }
 
@@ -268,8 +263,8 @@ body {
 .sandstone {
   background-color: #bbc1c3; }
 
-.browngreen {
-  background-color: #67604b; }
+.gold {
+  background-color: #ccad5b; }
 
 .scabbish {
   background-color: #7b394b; }
@@ -328,8 +323,12 @@ body {
   -o-background-size: cover;
   background-size: cover; }
 
-.margin-top-extra {
-  margin-top: 25%; }
+#brain-coral {
+  background: url(../img/brain-coral.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 h1.intro, h2 {
   font-family: 'wolf_in_the_cityregular', Arial, sans-serif;
@@ -346,15 +345,17 @@ h2 {
   margin: 0 0 0 0;
   line-height: 60px;
   padding-top: 15%;
+  transition: font-size 0.5s;
   text-shadow: 0 0 1px #aaaaaa; }
-  h2 br {
+  h2 br.hidden {
     display: none; }
 
 p {
   text-align: left;
   padding: 15% 15% 0 15%;
   line-height: 30px;
-  font-size: 22px; }
+  font-size: 22px;
+  transition: font-size 0.5s; }
 
 ul {
   padding: 5% 15% 0 20%; }
@@ -370,7 +371,7 @@ ul {
   font-family: 'wolf_in_the_cityregular', Arial, sans-serif;
   font-size: 80px;
   text-align: center;
-  margin: 20% 5%;
+  padding: 20% 5%;
   line-height: 40px;
   text-shadow: 3px 3px 1px #aaaaaa; }
 
@@ -381,22 +382,25 @@ ul {
     .photo-box:hover .caption {
       opacity: 1; }
 
+.top-bump {
+  padding-top: 25%; }
+
 /************************************
  * laptop
  ************************************/
-@media (max-width: 1250px) and (min-width: 1024px) {
+@media only screen and (max-width: 1250px) and (min-width: 1024px) {
   h1.intro {
     font-size: 200px; } }
 /************************************
  * ipad - landscape
  ************************************/
-@media (max-width: 1023px) and (min-width: 768px) {
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
   h1.intro {
     font-size: 180px;
     line-height: 120px;
     margin-top: 25%; }
 
-  h2 br {
+  h2 br.hidden, h2 br {
     display: inherit; }
 
   p {
@@ -406,19 +410,77 @@ ul {
 /************************************
  * ipad - portrait
  ************************************/
-@media (max-width: 767px) and (min-width: 568px) {
+@media only screen and (max-width: 767px) and (min-width: 568px) {
   h1.intro {
     font-size: 200px;
     line-height: 100px;
     margin-top: 30%; }
 
   .margin-top-extra {
-    margin-top: 5%; } }
+    margin-top: 5%; }
+
+  p {
+    padding-top: 13%; }
+
+  .caption {
+    opacity: 1; }
+
+  .photo-box {
+    transition: none; }
+    .photo-box:hover {
+      opacity: 1; } }
 /************************************
- * mobile 
+ * mobile
  ************************************/
-@media (max-width: 567px) {
+@media only screen and (max-width: 567px) {
   h1.intro {
     font-size: 130px;
     line-height: 60px;
-    margin-top: 50%; } }
+    margin-top: 50%; }
+
+  h2 br.hidden, h2 br {
+    display: inherit; }
+
+  p {
+    font-size: 17px; }
+
+  .caption {
+    opacity: 1; }
+
+  .photo-box {
+    transition: none; }
+    .photo-box:hover {
+      opacity: 1; } }
+/************************************
+ * iPhone landscape
+ ************************************/
+@media only screen and (max-device-width: 568px) and (orientation: landscape) {
+  h1.intro {
+    margin-top: 10%; }
+
+  .caption {
+    opacity: 1; }
+
+  .photo-box {
+    transition: none; }
+    .photo-box:hover {
+      opacity: 1; } }
+/************************************
+ * small mobile
+ ************************************/
+@media only screen and (max-width: 320px) {
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 15% 10%; }
+
+  h1.intro {
+    font-size: 110px; }
+
+  .caption {
+    opacity: 1; }
+
+  .photo-box {
+    transition: none; }
+    .photo-box:hover {
+      opacity: 1; } }
