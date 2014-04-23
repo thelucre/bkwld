@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -10,8 +10,17 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:200' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/screen.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="css/ie7.css">
+        <![endif]-->
+
+        <!--[if IE 8]>
+        <link rel="stylesheet" href="css/ie8.css">
+        <![endif]-->
+
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -22,60 +31,148 @@
             <div class="grid">
 
                 <div class="row">
-                    <div class="col-full row-full"></div>
+                    <div id="header" class="col-full row-full">
+                        <h1 class="intro">Goodbye, <br/>Barbados!</h1>
+                    </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-53 row-sm"></div>
-                    <div class="col-46 row-sm"></div>
+                    <div class="col-53 row-sm skyblue">
+                        <p>
+                        In 2007 Sam Lord's Castle was bought by CLICO (Barbados), but due to financial woes, the redevelopment didn't happen. For a while the Government of Barbados was proposing a buy-out. On 20 October 2010 Sam Lord's Castle was gutted by a major fire.
+                        </p>
+                    </div>
+                    <div id="island-castle" class="col-46 row-sm photo-box">
+                        <h3 class="caption">Sam Lord's Castle</h3>
+                    </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-26 row-sm"></div>
-                    <div class="col-26 row-sm"></div>
-                    <div class="col-46 row-sm"></div>
+                    <div id="snail" class="col-26 row-sm photo-box">
+                        <h3 class="caption">Some Giant Snail</h3>
+                    </div>
+                    <div class="col-26 row-sm limegreen">
+                        <p>
+                            The shells of these snails often grow to a length of 18 centimetres (7.1 in) with a diameter of 9 centimetres (3.5 in), making them the largest extant land snail species known.
+                        </p>
+                    </div>
+                    <div class="col-46 row-sm tan">
+                        <p>
+                            Escargot is a dish of cooked land snails, usually served as an appetizer in France and in French restaurants. The word escargot is also sometimes applied to the living snails of those species which are commonly eaten in this way.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-26 row-sm"></div>
-                    <div class="col-46 row-sm"></div>
-                    <div class="col-26 row-sm"></div>
+                    <div class="col-26 row-sm greyblue">
+                        <p>
+                            According to the Hebrew Bible, Bathsheba was the wife of Uriah the Hittite and later of David, king of the United Kingdom of Israel and Judah. 
+                        </p>
+                    </div>
+                    <div id="bathsheba" class="col-46 row-sm photo-box">
+                        <h3 class="caption">Bathsheba, <br/>on the East Coast</h3>
+                    </div>
+                    <div class="col-26 row-sm greygreen">
+                        <h2 class="margin-top-extra">
+                            Sprang<br/>
+                            Brayke<br/>
+                            Forevah!
+                        </h2>
+                    </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-46 row-lg"></div>
-                    <div class="col-53 row-lg"></div>
+                    <div class="col-46 row-lg rust">
+                        <h2>
+                            Luna
+                        </h2>    
+                        <p>
+                            A full moon is the lunar phase that occurs when the moon is completely illuminated as seen from the earth. This occurs when the moon is in opposition with the sun (when it is on the opposite side of the Earth from the Sun; more precisely, when the ecliptic longitudes of the Sun and Moon differ by 180 degrees).
+                        </p>
+                    </div>
+                    <div id="moonrise" class="col-53 row-lg photo-box">
+                        <h3 class="caption">Accra Beach Full Moon</h3>
+                    </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-26 row-xsm"></div>
-                    <div class="col-46 row-xsm"></div>
-                    <div class="col-26 row-xsm"></div>
+                    <div class="col-26 row-xsm skyblue">
+                        <p>
+                            The monsoon season or wet season is when most of a region's average annual rainfall occurs. 
+                        </p>
+                    </div>
+                    <div class="col-46 row-xsm teal">
+                        <p>
+                            The tropics include all the areas on the Earth where the Sun reaches a subsolar point.
+                        </p>
+                    </div>
+                    <div class="col-26 row-xsm darkblue">
+                        <p>
+                            Archipelagos may be found isolated in bodies of water or neighboring a large land mass. 
+                        </p>
+                    </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-46 row-xxlg"></div>
-                    <div class="row col-53 nested-right">
-                        <div class="row-xsm"></div>
+                    <div id="pink-sky" class="col-46 row-xxlg photo-box">
+                        <h3 class="caption">Pink Sky at Rockley</h3>
                     </div>
                     <div class="row col-53 nested-right">
-                        <div class="row-lg"></div>
+                        <div class="row-xsm pink">
+                            <h2>
+                            Cat luck ain'<br/> dog luck
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row col-53 nested-right">
+                        <div class="row-lg navy">
+                            <p>
+                                Irie (I-rie \I ' -ree) is the word in Jamaican Patois that means, "alright". The term can be used to mean 1: powerful and pleasing; 2: the state of feeling great. It is commonly used by members of the Rastafari movement (see Iyaric).
+                            <br/><br/>
+                                Irie may also refer to:
+                                <ul>
+                                    <li>Irie Maffia, Hungarian band formed in 2005</li>
+                                    <li>Irie Time, American reggae band formed in the early 1990s</li>
+                                </ul>
+                            </p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-46 row-xlg nested-right"></div>
+                    <div id="frangipani" class="col-46 row-xlg nested-right photo-box">
+                        <h3 class="caption">A Tree Called Frangipani</h3>
+                    </div>
                     <div class="row col-53 nested-left">
-                        <div class="col-26 row-md nested-right double-nested"></div>
-                        <div class="row col-26 nested-left">
-                            <div class="row-xsm"></div>
+                        <div class="col-26 row-md nested-right double-nested browngreen">
+                            <h2>
+                                Bajan
+                            </h2>
+                            <p>
+                                Like many other English-based Caribbean creole languages, Bajan consists of a West African substrate and an English superstrate.  
+                            </p>
                         </div>
                         <div class="row col-26 nested-left">
-                            <div class="row-xsm double-nested"></div>
+                            <div class="row-xsm sandstone">
+                                <p>
+                                    In 2007 Sam Lord's Castle was bought by CLICO (Barbados), but due to financial woes, the redevelopment didn't happen. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row col-26 nested-left">
+                            <div class="row-xsm double-nested scabbish">
+                                <p>
+                                    In 2007 Sam Lord's Castle was bought by CLICO (Barbados), but due to financial woes, the redevelopment didn't happen. 
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="row col-53 nested-left">
-                        <div class="row-xsm"></div>
+                        <div class="row-xsm pink">
+                            <p>
+                                In 2007 Sam Lord's Castle was bought by CLICO (Barbados), but due to financial woes, the redevelopment didn't happen. 
+                            </p>
+                        </div>
                     </div>
                 </div>
 

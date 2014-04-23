@@ -23,4 +23,7 @@ line_comments = false
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 
-Sass::Script::Number.precision = 0
+require 'animate-sass'
+
+# to limit pixel math decimals
+Sass::Script::Number.precision = 1

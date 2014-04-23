@@ -1,0 +1,11 @@
+@function numToPx($num){
+  @return ($num) * 1px; 
+}
+
+@mixin setBackgroundImage( $img ) {
+	background: url(../img/#{$img}) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
